@@ -64,7 +64,6 @@
                             <constraint firstItem="scc-L4-qAL" firstAttribute="leading" secondItem="rHA-Tu-Jin" secondAttribute="leading" constant="10" id="Cbu-t9-iQo"/>
                             <constraint firstItem="rHA-Tu-Jin" firstAttribute="trailing" secondItem="scc-L4-qAL" secondAttribute="trailing" constant="10" id="JUY-pt-8Yg"/>
                             <constraint firstItem="scc-L4-qAL" firstAttribute="centerY" secondItem="i9V-5K-Ulf" secondAttribute="centerY" id="bnR-kn-etL"/>
-                            <constraint firstItem="scc-L4-qAL" firstAttribute="centerX" secondItem="i9V-5K-Ulf" secondAttribute="centerX" id="o30-T3-ufr"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="О школе" image="house" catalog="system" id="OL3-ey-aEJ"/>
