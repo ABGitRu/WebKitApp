@@ -1,24 +1,104 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AwI-Qk-pSv">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Демо урок-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WebViewController" customModule="WebKitApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eYU-C7-d84">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="eYU-C7-d84" secondAttribute="bottom" id="VXK-TO-1Qm"/>
+                            <constraint firstItem="eYU-C7-d84" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="jik-4S-9ui"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eYU-C7-d84" secondAttribute="trailing" id="ptH-eX-cis"/>
+                            <constraint firstItem="eYU-C7-d84" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xOI-kV-fQy"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Демо урок" image="graduationcap" catalog="system" id="Q62-aH-lDI"/>
+                    <connections>
+                        <outlet property="webView" destination="eYU-C7-d84" id="7Vs-ql-Qbi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1367" y="88"/>
+        </scene>
+        <!--О школе-->
+        <scene sceneID="7Jh-qo-i4T">
+            <objects>
+                <viewController id="SHM-Jh-O6c" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="i9V-5K-Ulf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Under Construction" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="scc-L4-qAL">
+                                <rect key="frame" x="10" y="318.5" width="355" height="30.5"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="rHA-Tu-Jin"/>
+                        <color key="backgroundColor" red="0.0" green="0.41568627450980389" blue="0.396078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="scc-L4-qAL" firstAttribute="leading" secondItem="rHA-Tu-Jin" secondAttribute="leading" constant="10" id="Cbu-t9-iQo"/>
+                            <constraint firstItem="rHA-Tu-Jin" firstAttribute="trailing" secondItem="scc-L4-qAL" secondAttribute="trailing" constant="10" id="JUY-pt-8Yg"/>
+                            <constraint firstItem="scc-L4-qAL" firstAttribute="centerY" secondItem="i9V-5K-Ulf" secondAttribute="centerY" id="bnR-kn-etL"/>
+                            <constraint firstItem="scc-L4-qAL" firstAttribute="centerX" secondItem="i9V-5K-Ulf" secondAttribute="centerX" id="o30-T3-ufr"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="О школе" image="house" catalog="system" id="OL3-ey-aEJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fgc-BE-R2t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="929" y="839"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="hOB-H1-mZc">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="AwI-Qk-pSv" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="v8O-wC-QPh">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="1" green="0.68235294117647061" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="SHM-Jh-O6c" kind="relationship" relationship="viewControllers" id="El1-n8-u6T"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="xrN-Kb-SEr"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="791-JV-XGS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="88.392857142857139"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="graduationcap" catalog="system" width="128" height="106"/>
+        <image name="house" catalog="system" width="128" height="106"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
